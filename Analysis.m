@@ -1,4 +1,4 @@
-function [Data] = Analysis(filename, startRow, endRow)
+function [Cell1T,Cell2T,Cell3T,Cell4T,Time] = Analysis(filename, startRow, endRow)
 
 
 %% If no startRow and endRow are defined, this will automatically select all the data
@@ -24,8 +24,12 @@ Time = Data(:,1);
 %% Plotting the graphs
 subplot(2,1,1)
 plot(Time,SetT,Time,CuT,Time,Cell1T,Time,Cell2T,Time,Cell3T,Time,Cell4T)
+xlabel("Time (s)")
+ylabel("Temperature (C)")
 subplot(2,1,2)
 plot(Time,Voltage)
+xlabel("Time (s)")
+ylabel("Voltage (V)")
 end
 
 
