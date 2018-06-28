@@ -1,7 +1,7 @@
 function [Data] = Analysis(filename, startRow, endRow)
 
 
-%%
+%% If no startRow and endRow are defined, this will automatically select all the data
 if nargin<=2
     startRow = 3;
     endRow = inf;
